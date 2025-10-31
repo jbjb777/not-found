@@ -41,7 +41,13 @@
       padding: 40px;
       max-width: 600px;
     }
-
+    
+    .logo-image {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+    }
+    
     .logo {
       font-size: 22px;
       font-weight: bold;
@@ -56,7 +62,6 @@
       gap: 15px;
       align-items: center;
     }
-
     .top-button {
       background: #3663FF;
       color: #fff;
@@ -69,12 +74,14 @@
       white-space: nowrap;
       min-width: 250px;
     }
-
     .top-button:hover {
       transform: translateY(-8px) scale(1.05);
     }
-
     @media (max-width: 800px) {
+      .logo-image {
+        width: 100px;
+        height: 100px;
+      }
       .logo {
         font-size: 18px;
       }
@@ -86,12 +93,12 @@
 </head>
 <body>
   <div class="container">
+    <img src="logo.svg" alt="Logo" class="logo-image" />
     <div class="logo">⚠️ 이 도메인은 "jbjb.r-e.kr"로 변경되었습니다.</div>
     <div class="button-container">
       <button class="top-button" id="openLinkBtn1">🔗 이 도메인으로 이동</button>
     </div>
   </div>
-
   <script>
     document.getElementById('openLinkBtn1').addEventListener('click', () => {
       window.open('https://jbjb.r-e.kr', '_blank');
